@@ -6,22 +6,22 @@ import json
 
 #JSON
 #creates a fun dictionary from the json file
-with open("deckinfo.json", "rt") as infile:
+with open('deckinfo.json', 'rt') as infile:
     deck_info = json.load(infile)
 
 #Roots
 #Creates, names, and titles root window
 root = Tk()
-root.title('Map v0.5')
+root.title('Map v0.6')
 
 #Switch
 #Handles screen switching and calls icons()
 def switch():
     val = str(deck_number.get())
-    if val in deck_info["decks"]:
-        width = deck_info["decks"][val]["resize"][0]
-        height = deck_info["decks"][val]["resize"][1]
-        deck_image_temp = Image.open(deck_info["decks"][val]["file"])
+    if val in deck_info['decks']:
+        width = deck_info['decks'][val]['resize'][0]
+        height = deck_info['decks'][val]['resize'][1]
+        deck_image_temp = Image.open(deck_info['decks'][val]['file'])
         deck_image_temp = deck_image_temp.resize((width, height), Image.ANTIALIAS)
         global deck_image
         deck_image = ImageTk.PhotoImage(deck_image_temp)
@@ -33,34 +33,34 @@ def switch():
 
     else:
         info_2.delete(1.0, 'end')
-        info_2.insert(1.0, "Something went wrong.")
+        info_2.insert(1.0, 'Something went wrong.'')
 
 #icons
 def icons(val):
-    if "icons" in deck_info["decks"][val]:
+    if 'icons' in deck_info['decks'][val]:
         count = 0
-        for icon in deck_info["decks"][val]["icons"]:
+        for icon in deck_info['decks'][val]['icons']:
             count += 1
-            tag_name = "icon"+str(count)
-            display_1.create_image(int(icon["coordinates"][0]), int(icon["coordinates"][1]),
+            tag_name = 'icon'+str(count)
+            display_1.create_image(int(icon['coordinates'][0]), int(icon['coordinates'][1]),
                                    image=icon_image, tags=(tag_name, 'obj'))
 
 
             display_1.tag_bind(tag_name, '<Button-1>', lambda x, icon=icon: textswitch(icon)) #I gotta buy dinner for Vel for this one
             info_2.delete(1.0, 'end')
-            info_2.insert(1.0, "Click stars for more info.")
-            deck_text_title.set("")
+            info_2.insert(1.0, 'Click stars for more info.'')
+            deck_text_title.set('')
     else:
         pass
 
 def textswitch(icon):
         info_2.delete(1.0, 'end')
-        info_2.insert(1.0, icon["info"])
-        deck_text_title.set(icon["name"])
+        info_2.insert(1.0, icon['info'])
+        deck_text_title.set(icon['name'])
 
 #Images
 #Creates an image object and global reference for POI icons
-icon_image_temp = Image.open("icons/star.png")
+icon_image_temp = Image.open('icons/star.png')
 icon_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 icon_image = ImageTk.PhotoImage(icon_image_temp)
 
@@ -70,24 +70,24 @@ deck_number = DoubleVar()
 deck_number.set(5.0)
 
 deck_text_title = StringVar()
-deck_text_title.set("Intro")
+deck_text_title.set('Intro')
 
 #Widgets
 #Creates widgets
 #Frames
 frame_1 = ttk.Frame(root, borderwidth=5, relief='groove')
-dframe_1 = ttk.Frame(frame_1, borderwidth=3, relief="ridge", padding=0)
-dframe_2 = ttk.Frame(frame_1, borderwidth=3, relief='ridge', padding=0)
-dframe_3 = ttk.Frame(frame_1, borderwidth=3, relief='ridge', padding=0)
+dframe_1 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
+dframe_2 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
+dframe_3 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
 
 
 #Labels
-label_1 = ttk.Label(dframe_1, text="Info")
-label_2 = ttk.Label(dframe_3,text="Deck Select")
+label_1 = ttk.Label(dframe_1, text='Info')
+label_2 = ttk.Label(dframe_3,text='Deck Select')
 
 info_1 = ttk.Label(dframe_2, textvariable=deck_text_title)
 info_2 = Text(dframe_2, width=20, height=15)
-info_2.insert(1.0, "Select a deck number to begin.")
+info_2.insert(1.0, 'Select a deck number to begin.'')
 
 #Canvas
 display_1 = Canvas(frame_1, borderwidth=5, relief='sunken', width=500, height=800)
@@ -105,19 +105,19 @@ button_1 = ttk.Button(dframe_3, text='Go', command=switch)
 frame_1.grid(column=0, row=0, sticky=N+S+E+W)
 dframe_1.grid(column=0, row=0, sticky=N+S+E+W, rowspan=1)
 dframe_2.grid(column=0, row=1, sticky=N+S+E+W, rowspan=2)
-dframe_3.grid(column=0, row=3, sticky=N+S+E+W, rowspan=3)
+dframe_3.grid(column=0, row=3, sticky=N+S+E+W, rowspan=2)
 
-label_1.grid(column=0, row=0, sticky=S+W)
-label_2.grid(column=0, row=0, sticky=S+W)
+label_1.grid(column=0, row=0, sticky=N+S+E+W)
+label_2.grid(column=0, row=0, sticky=S+W, padx=5, pady=12)
 
 info_1.grid(column=0, row=0, sticky=S+W)
 info_2.grid(column=0, row=1, sticky=E+W)
 
-options_1.grid(column=0, row=1)
+options_1.grid(column=0, row=1, padx=5, pady=12)
 
-button_1.grid(column=0, row=2)
+button_1.grid(column=0, row=2, padx=5, pady=12)
 
-display_1.grid(column=1, row=0, rowspan=6, sticky=N+S+E+W)
+display_1.grid(column=1, row=0, rowspan=5, sticky=N+S+E+W)
 
 #Resizing
 #configure resizing behavior
