@@ -33,7 +33,7 @@ def switch():
 
     else:
         info_2.delete(1.0, 'end')
-        info_2.insert(1.0, 'Something went wrong.'')
+        info_2.insert(1.0, 'Something went wrong.')
 
 #icons
 def icons(val):
@@ -44,11 +44,10 @@ def icons(val):
             tag_name = 'icon'+str(count)
             display_1.create_image(int(icon['coordinates'][0]), int(icon['coordinates'][1]),
                                    image=icon_image, tags=(tag_name, 'obj'))
-
-
             display_1.tag_bind(tag_name, '<Button-1>', lambda x, icon=icon: textswitch(icon)) #I gotta buy dinner for Vel for this one
+
             info_2.delete(1.0, 'end')
-            info_2.insert(1.0, 'Click stars for more info.'')
+            info_2.insert(1.0, 'Click stars for more info.')
             deck_text_title.set('')
     else:
         pass
@@ -87,7 +86,7 @@ label_2 = ttk.Label(dframe_3,text='Deck Select')
 
 info_1 = ttk.Label(dframe_2, textvariable=deck_text_title)
 info_2 = Text(dframe_2, width=20, height=15)
-info_2.insert(1.0, 'Select a deck number to begin.'')
+info_2.insert(1.0, 'Select a deck number to begin.')
 
 #Canvas
 display_1 = Canvas(frame_1, borderwidth=5, relief='sunken', width=500, height=800)
@@ -121,14 +120,17 @@ display_1.grid(column=1, row=0, rowspan=5, sticky=N+S+E+W)
 
 #Resizing
 #configure resizing behavior
-'''
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
-frame_1.columnconfigure(0, weight=3)
-frame_1.columnconfigure(1, weight=2)
-frame_1.rowconfigure(0, weight=2)
-frame_1.rowconfigure(1, weight=2)
-'''
+frame_1.columnconfigure((0, 1), weight=2)
+frame_1.rowconfigure((0, 1, 2, 3, 4), weight=2)
+dframe_1.columnconfigure(0, weight=3)
+dframe_1.rowconfigure(0, weight=3)
+dframe_2.columnconfigure(0, weight=3)
+dframe_2.rowconfigure((0, 1), weight=3)
+dframe_3.columnconfigure(0, weight=3)
+dframe_3.rowconfigure((0, 1), weight=3)
+
 
 #Mainloop
 root.mainloop()
