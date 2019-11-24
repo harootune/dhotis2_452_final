@@ -1,6 +1,7 @@
 #Import Statements
 from tkinter import *
 from tkinter import ttk
+from pathlib import Path
 from PIL import Image, ImageTk
 import json
 
@@ -21,7 +22,7 @@ def switch():
     if val in deck_info['decks']:
         width = deck_info['decks'][val]['resize'][0]
         height = deck_info['decks'][val]['resize'][1]
-        deck_image_temp = Image.open(deck_info['decks'][val]['file'])
+        deck_image_temp = Image.open(Path(deck_info['decks'][val]['file']))
         deck_image_temp = deck_image_temp.resize((width, height), Image.ANTIALIAS)
         global deck_image
         deck_image = ImageTk.PhotoImage(deck_image_temp)
@@ -59,7 +60,7 @@ def textswitch(icon):
 
 #Images
 #Creates an image object and global reference for POI icons
-icon_image_temp = Image.open('icons/star.png')
+icon_image_temp = Image.open(Path('icons/star.png'))
 icon_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 icon_image = ImageTk.PhotoImage(icon_image_temp)
 

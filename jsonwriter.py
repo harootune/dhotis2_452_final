@@ -1,6 +1,11 @@
+'''
+This file is just a quick utility I wrote to create json files from a python
+dictionary. Not directly used in the map's operation, just here for convenience
+'''
+
 body = {"decks":{
     1.0:{
-        "file":'floorplans\EAST_01.png',
+        "file":'floorplans/EAST_01.png',
         "deck_text":"Deck 1",
         "resize":[359, 800],
         "icons": [
@@ -13,7 +18,7 @@ body = {"decks":{
             ]
         },
     2.0:{
-        "file":'floorplans\EAST_02_WEST_02.png',
+        "file":'floorplans/EAST_02_WEST_02.png',
         "deck_text":"Deck 2",
         "resize":[481, 800],
         "icons": [
@@ -23,10 +28,10 @@ body = {"decks":{
             {"name": "Example 2-2",
              "coordinates": (400, 400),
              "info": "Example Text 2-2"}
-            ]        
+            ]
         },
     3.0:{
-        "file":'floorplans\EAST_03.png',
+        "file":'floorplans/EAST_03.png',
         "deck_text":"Deck 3",
         "resize":[361, 800],
         "icons": [
@@ -39,7 +44,7 @@ body = {"decks":{
             ]
         },
     3.5:{
-        "file":'floorplans\WEST_3.5.png',
+        "file":'floorplans/WEST_3.5.png',
         "deck_text":"Deck 3.5",
         "resize":[364, 800],
         "icons": [
@@ -52,7 +57,7 @@ body = {"decks":{
             ]
         },
     4.0:{
-        "file":'floorplans\EAST_04.png',
+        "file":'floorplans/EAST_04.png',
         "deck_text":"Deck 4",
         "resize":[481, 800],
         "icons": [
@@ -65,7 +70,7 @@ body = {"decks":{
             ]
         },
     5.0:{
-        "file":'floorplans\EAST_05_West_05.png',
+        "file":'floorplans/EAST_05_West_05.png',
         "deck_text":"Deck 5",
         "resize":[338, 800],
         "icons": [
@@ -78,7 +83,7 @@ body = {"decks":{
             ]
         },
     6.0:{
-        "file":'floorplans\EAST_06.png',
+        "file":'floorplans/EAST_06.png',
         "deck_text":"Deck 6",
         "resize":[379, 800],
         "icons": [
@@ -91,7 +96,7 @@ body = {"decks":{
             ]
         },
     7.0:{
-        "file":'floorplans\EAST_07.png',
+        "file":'floorplans/EAST_07.png',
         "deck_text":"Deck 7",
         "resize":[376, 800],
         "icons": [
@@ -104,7 +109,7 @@ body = {"decks":{
             ]
         },
     8.0:{
-        "file":'floorplans\EAST_08.png',
+        "file":'floorplans/EAST_08.png',
         "deck_text":"Deck 8",
         "resize":[375, 800],
         "icons": [
@@ -117,7 +122,7 @@ body = {"decks":{
             ]
         },
     9.0:{
-        "file":'floorplans\EAST_09.png',
+        "file":'floorplans/EAST_09.png',
         "deck_text":"Deck 9",
         "resize":[378, 800],
         "icons": [
@@ -130,7 +135,7 @@ body = {"decks":{
             ]
         },
     9.5:{
-        "file":'floorplans\WEST_9.5.png',
+        "file":'floorplans/WEST_9.5.png',
         "deck_text":"Deck 9.5",
         "resize":[365, 800],
         "icons": [
@@ -143,7 +148,7 @@ body = {"decks":{
             ]
         },
     -1.0:{
-        "file":'floorplans\WEST_basement.png',
+        "file":'floorplans/WEST_basement.png',
         "deck_text":"Basement",
         "resize":[364, 800],
         "icons": [
