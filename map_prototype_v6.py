@@ -18,7 +18,7 @@ root.title('Map v0.6')
 #Switch
 #Handles screen switching and calls icons()
 def switch():
-    val = str(deck_number.get())
+    val = deck_number.get()
     if val in deck_info['decks']:
         width = deck_info['decks'][val]['resize'][0]
         height = deck_info['decks'][val]['resize'][1]
@@ -65,9 +65,9 @@ icon_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 icon_image = ImageTk.PhotoImage(icon_image_temp)
 
 #Variables
-#inits some useful variables for later (text and float)
-deck_number = DoubleVar()
-deck_number.set(5.0)
+#inits some useful variables for later
+deck_number = StringVar()
+deck_number.set('5 East')
 
 deck_text_title = StringVar()
 deck_text_title.set('Intro')
@@ -90,11 +90,12 @@ info_2 = Text(dframe_2, width=20, height=15)
 info_2.insert(1.0, 'Select a deck number to begin.')
 
 #Canvas
-display_1 = Canvas(frame_1, borderwidth=5, relief='sunken', width=500, height=800)
+display_1 = Canvas(frame_1, borderwidth=5, relief='sunken', width=600, height=600)
 
 #Dropdown
 options_1 = ttk.Combobox(dframe_3, textvariable=deck_number, values=(
-    -1.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 9.5))
+    'Basement West', '1 East', '2 East', '2 West', '3 East', '3.5 West', '4 East',
+    '5 East', '5 West', '6 East', '7 East', '8 East', '9 East', '9.5 West'))
 
 #Button
 button_1 = ttk.Button(dframe_3, text='Go', command=switch)
