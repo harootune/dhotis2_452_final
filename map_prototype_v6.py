@@ -53,6 +53,30 @@ def icons(val):
     else:
         pass
 
+def exits(val):
+    if 'exits' in deck_info['decks'][val]:
+        count = 0
+        for exit in deck_info['decks'][val]['exits']:
+            count += 1
+            tag_name = 'exit'+str(count)
+            display_1.create_image(int(exit['coordinates'][0]), int(exit['coordinates'][1]),
+                                   image=exit_image, tags=(tag_name, 'obj'))
+            display_1.tag_bind(tag_name, '<Button-1>', lambda x, exit=exit: textswitch(exit)) #Probably not necessary here
+    else:
+        pass
+
+def eastwest(val):
+    if 'eastwest' in deck_info['decks'][val]:
+        count = 0
+        for eastwest in deck_info['decks'][val]['eastwest']:
+            count += 1
+            tag_name = 'eastwest'+str(count)
+            display_1.create_image(int(eastwest['coordinates'][0]), int(eastwest['coordinates'][1]),
+                                   image=eastwest_image, tags=(tag_name, 'obj'))
+            display_1.tag_bind(tag_name, '<Button-1>', lambda x, eastwest=eastwest: textswitch(eastwest)) #bind to different function
+    else:
+        pass
+
 def textswitch(icon):
         info_2.delete(1.0, 'end')
         info_2.insert(1.0, icon['info'])
@@ -63,6 +87,14 @@ def textswitch(icon):
 icon_image_temp = Image.open(Path('icons/star.png'))
 icon_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 icon_image = ImageTk.PhotoImage(icon_image_temp)
+
+exit_image_temp = Image.open(Path('icons/star.png')) #temp
+exit_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
+exit_image = ImageTk.PhotoImage(icon_image_temp)
+
+eastwest_image_temp = Image.open(Path('icons/star.png')) #temp
+eastwest_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
+eastwest_image = ImageTk.PhotoImage(icon_image_temp)
 
 #Variables
 #inits some useful variables for later
