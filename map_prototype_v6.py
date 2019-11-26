@@ -31,6 +31,7 @@ def switch():
         display_1.create_image(width/2, height/2, anchor=CENTER, image=deck_image, tags='obj')
 
         icons(val)
+        exits(val)
 
     else:
         info_2.delete(1.0, 'end')
@@ -88,11 +89,11 @@ icon_image_temp = Image.open(Path('icons/star.png'))
 icon_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 icon_image = ImageTk.PhotoImage(icon_image_temp)
 
-exit_image_temp = Image.open(Path('icons/star.png')) #temp
+exit_image_temp = Image.open(Path('icons/exit.png')) #temp
 exit_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 exit_image = ImageTk.PhotoImage(icon_image_temp)
 
-eastwest_image_temp = Image.open(Path('icons/star.png')) #temp
+eastwest_image_temp = Image.open(Path('icons/eastwest.png')) #temp
 eastwest_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 eastwest_image = ImageTk.PhotoImage(icon_image_temp)
 
