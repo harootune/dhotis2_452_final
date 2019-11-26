@@ -90,12 +90,12 @@ icon_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
 icon_image = ImageTk.PhotoImage(icon_image_temp)
 
 exit_image_temp = Image.open(Path('icons/exit.png')) #temp
-exit_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
-exit_image = ImageTk.PhotoImage(icon_image_temp)
+exit_image_temp = exit_image_temp.resize((25, 25), Image.ANTIALIAS)
+exit_image = ImageTk.PhotoImage(exit_image_temp)
 
 eastwest_image_temp = Image.open(Path('icons/eastwest.png')) #temp
-eastwest_image_temp = icon_image_temp.resize((25, 25), Image.ANTIALIAS)
-eastwest_image = ImageTk.PhotoImage(icon_image_temp)
+eastwest_image_temp = eastwest_image_temp.resize((25, 25), Image.ANTIALIAS)
+eastwest_image = ImageTk.PhotoImage(eastwest_image_temp)
 
 #Variables
 #inits some useful variables for later
