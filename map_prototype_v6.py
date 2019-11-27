@@ -32,10 +32,17 @@ def switch():
 
         icons(val)
         exits(val)
+        eastwest(val)
 
     else:
         info_2.delete(1.0, 'end')
         info_2.insert(1.0, 'Something went wrong.')
+
+#this is a slight variation on the switch() function which allows for switching
+#using tag_bind functions
+def ew_switch(target):
+    deck_number.set(target)
+    switch()
 
 #icons
 def icons(val):
@@ -62,11 +69,11 @@ def exits(val):
             tag_name = 'exit'+str(count)
             display_1.create_image(int(exit['coordinates'][0]), int(exit['coordinates'][1]),
                                    image=exit_image, tags=(tag_name, 'obj'))
-            display_1.tag_bind(tag_name, '<Button-1>', lambda x, exit=exit: textswitch(exit)) #Probably not necessary here
+            display_1.tag_bind(tag_name, '<Button-1>', lambda x, exit=exit: textswitch(exit))
     else:
         pass
 
-def eastwest(val):
+def eastwest(val): #update variables and structure handling
     if 'eastwest' in deck_info['decks'][val]:
         count = 0
         for eastwest in deck_info['decks'][val]['eastwest']:
@@ -74,7 +81,7 @@ def eastwest(val):
             tag_name = 'eastwest'+str(count)
             display_1.create_image(int(eastwest['coordinates'][0]), int(eastwest['coordinates'][1]),
                                    image=eastwest_image, tags=(tag_name, 'obj'))
-            display_1.tag_bind(tag_name, '<Button-1>', lambda x, eastwest=eastwest: textswitch(eastwest)) #bind to different function
+            display_1.tag_bind(tag_name, '<Button-1>', lambda x, target=eastwest['target']: ew_switch (target)) #bind to different function
     else:
         pass
 

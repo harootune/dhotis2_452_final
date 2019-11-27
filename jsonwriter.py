@@ -25,12 +25,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Switch 1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Switch 2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "1 East":{
@@ -54,12 +50,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "2 East":{
@@ -83,12 +75,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "2 West":{
@@ -112,12 +100,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "3 East":{
@@ -141,12 +125,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "3.5 West":{
@@ -170,12 +150,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "4 East":{
@@ -199,12 +175,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "5 East":{
@@ -228,12 +200,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "5 West":{
@@ -257,12 +225,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "6 East":{
@@ -286,12 +250,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "7 East":{
@@ -315,12 +275,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "8 East":{
@@ -344,12 +300,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "9 East":{
@@ -373,12 +325,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]
         },
     "9.5 West":{
@@ -402,12 +350,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"name": "Example B-1",
-             "coordinates": (450, 450),
-             "info": "Example Text B-1"},
-            {"name": "Example B-2",
-             "coordinates": (500, 500),
-             "info": "Example Text B-2"}
+            {"coordinates": (450, 450),
+             "target": "1 East"}
             ]}
         }
 }
