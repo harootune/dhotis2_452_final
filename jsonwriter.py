@@ -23,10 +23,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "1 East":{
@@ -48,10 +44,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "2 East":{
@@ -75,8 +67,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
+            {"coordinates": (315, 15),
+             "target": "2 West"}
             ]
         },
     "2 West":{
@@ -100,8 +92,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
+            {"coordinates": (232, 280),
+             "target": "2 East"}
             ]
         },
     "3 East":{
@@ -123,10 +115,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "3.5 West":{
@@ -148,10 +136,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "4 East":{
@@ -173,10 +157,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "5 East":{
@@ -200,8 +180,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
+            {"coordinates": (179, 15),
+             "target": "5 West"}
             ]
         },
     "5 West":{
@@ -225,8 +205,8 @@ body = {"decks":{
              "info": "Emergency Exit 2"}
             ],
         "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
+            {"coordinates": (236, 285),
+             "target": "5 East"}
             ]
         },
     "6 East":{
@@ -248,10 +228,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "7 East":{
@@ -273,10 +249,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "8 East":{
@@ -298,10 +270,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "9 East":{
@@ -323,10 +291,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]
         },
     "9.5 West":{
@@ -348,10 +312,6 @@ body = {"decks":{
             {"name": "Emergency Exit",
              "coordinates": (100, 100),
              "info": "Emergency Exit 2"}
-            ],
-        "eastwest": [
-            {"coordinates": (450, 450),
-             "target": "1 East"}
             ]}
         }
 }
