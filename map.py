@@ -117,15 +117,15 @@ deck_text_title.set('Intro')
 #Frames
 frame_1 = ttk.Frame(root, borderwidth=5, relief='groove')
 dframe_1 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
-dframe_2 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
+dframe_2 = ttk.Frame(frame_1, borderwidth=3, relief='flat')
 dframe_3 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
 
 
 #Labels
-label_1 = ttk.Label(dframe_1, text='Info')
+label_1 = ttk.Label(dframe_1, text='Info:')
 label_2 = ttk.Label(dframe_3,text='Deck Select')
 
-info_1 = ttk.Label(dframe_2, textvariable=deck_text_title)
+info_1 = ttk.Label(dframe_1, textvariable=deck_text_title)
 info_2 = Text(dframe_2, width=20, height=15)
 info_2.insert(1.0, 'Select a deck number to begin.')
 
@@ -148,11 +148,12 @@ dframe_1.grid(column=0, row=0, sticky=N+S+E+W, rowspan=1)
 dframe_2.grid(column=0, row=1, sticky=N+S+E+W, rowspan=2)
 dframe_3.grid(column=0, row=3, sticky=N+S+E+W, rowspan=2)
 
-label_1.grid(column=0, row=0, sticky=N+S+E+W)
+
+label_1.grid(column=0, row=0, sticky=N+S+E+W, padx=5)
 label_2.grid(column=0, row=0, sticky=S+W, padx=5, pady=12)
 
-info_1.grid(column=0, row=0, sticky=S+W)
-info_2.grid(column=0, row=1, sticky=E+W)
+info_1.grid(column=0, row=1, sticky=N+S+E+W, padx=5)
+info_2.grid(column=0, row=0, sticky=E+W)
 
 options_1.grid(column=0, row=1, padx=5, pady=12)
 
@@ -167,9 +168,9 @@ root.rowconfigure(0, weight=1)
 frame_1.columnconfigure((0, 1), weight=2)
 frame_1.rowconfigure((0, 1, 2, 3, 4), weight=2)
 dframe_1.columnconfigure(0, weight=3)
-dframe_1.rowconfigure(0, weight=3)
+dframe_1.rowconfigure((0, 1), weight=3)
 dframe_2.columnconfigure(0, weight=3)
-dframe_2.rowconfigure((0, 1), weight=3)
+dframe_2.rowconfigure((0), weight=3)
 dframe_3.columnconfigure(0, weight=3)
 dframe_3.rowconfigure((0, 1), weight=3)
 
