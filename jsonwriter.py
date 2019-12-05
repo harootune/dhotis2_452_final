@@ -51,12 +51,9 @@ body = {"decks":{
         "deck_text":"Deck 2 East",
         "resize":[510, 600],
         "icons": [
-            {"name": "Example E2-1",
-             "coordinates": (300, 300),
-             "info": "Example Text E2-1"},
-            {"name": "Example E2-2",
-             "coordinates": (400, 400),
-             "info": "Example Text E2-2"}
+            {"name": "Old Carrel Rule Posting",
+             "coordinates": (145, 500),
+             "info": "An old sheet of rules for using research carrels, in the remains of a decomissioned carrel space. Suggests that carrels used to be much more popular, used by 2-4 people at a time."}
             ],
         "exits": [
             {"name": "Emergency Exit",
@@ -143,12 +140,9 @@ body = {"decks":{
         "deck_text":"Deck 4 East",
         "resize":[505, 600],
         "icons": [
-            {"name": "Example E4-1",
-             "coordinates": (300, 300),
-             "info": "Example Text E4-1"},
-            {"name": "Example E4-2",
-             "coordinates": (400, 400),
-             "info": "Example Text E4-2"}
+            {"name": "Pneumatic Tubes",
+             "coordinates": (300, 335),
+             "info": "The main library once used an intricate system of pneumatic tubes to transfer documents and allow communication between units. The system is no longer used, but part of its infrastructure remains here."}
             ],
         "exits": [
             {"name": "Emergency Exit",
@@ -235,12 +229,9 @@ body = {"decks":{
         "deck_text":"Deck 7 East",
         "resize":[402, 600],
         "icons": [
-            {"name": "Example E7-1",
-             "coordinates": (300, 300),
-             "info": "Example Text E7-1"},
-            {"name": "Example E7-2",
-             "coordinates": (400, 400),
-             "info": "Example Text E7-2"}
+            {"name": "Sealed Doorway",
+             "coordinates": (30, 18),
+             "info": "When the western section of the stacks was built, the old outer wall of the east stacks had to be converted to an inner wall. Here is one artifact of that conversion, a bricked-up doorway never painted over."}
             ],
         "exits": [
             {"name": "Emergency Exit",

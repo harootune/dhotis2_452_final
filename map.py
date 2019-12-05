@@ -13,10 +13,10 @@ with open('deckinfo.json', 'rt') as infile:
 #Roots
 #Creates, names, and titles root window
 root = Tk()
-root.title('Map v0.6')
+root.title('Stacks Map')
 
 #Switch
-#Handles screen switching and calls icons()
+#Handles screen switching and calls icon rendering functions
 def switch():
     val = deck_number.get()
     if val in deck_info['decks']:
@@ -44,7 +44,7 @@ def ew_switch(target):
     deck_number.set(target)
     switch()
 
-#icons
+#renders POI icons
 def icons(val):
     if 'icons' in deck_info['decks'][val]:
         count = 0
@@ -61,6 +61,7 @@ def icons(val):
     else:
         pass
 
+#renders emergency exits
 def exits(val):
     if 'exits' in deck_info['decks'][val]:
         count = 0
@@ -73,7 +74,8 @@ def exits(val):
     else:
         pass
 
-def eastwest(val): #update variables and structure handling
+#renders east-west switches
+def eastwest(val):
     if 'eastwest' in deck_info['decks'][val]:
         count = 0
         for eastwest in deck_info['decks'][val]['eastwest']:
@@ -85,6 +87,7 @@ def eastwest(val): #update variables and structure handling
     else:
         pass
 
+#updates info boxes with relevant information
 def textswitch(icon):
         info_2.delete(1.0, 'end')
         info_2.insert(1.0, icon['info'])
