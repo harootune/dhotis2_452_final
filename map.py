@@ -55,11 +55,9 @@ def icons(val):
                                    image=icon_image, tags=(tag_name, 'obj'))
             display_1.tag_bind(tag_name, '<Button-1>', lambda x, icon=icon: textswitch(icon)) #I gotta buy dinner for Vel for this one
 
-            info_2.delete(1.0, 'end')
-            info_2.insert(1.0, 'Click stars for more info.')
+            info_2.delete(1.0, 'end') #this and following line need to be relocated for more consistent performance
+            info_2.insert(1.0, 'Click icons for more info')
             deck_text_title.set('')
-    else:
-        pass
 
 #renders emergency exits
 def exits(val):
@@ -71,8 +69,6 @@ def exits(val):
             display_1.create_image(int(exit['coordinates'][0]), int(exit['coordinates'][1]),
                                    image=exit_image, tags=(tag_name, 'obj'))
             display_1.tag_bind(tag_name, '<Button-1>', lambda x, exit=exit: textswitch(exit))
-    else:
-        pass
 
 #renders east-west switches
 def eastwest(val):
@@ -84,8 +80,6 @@ def eastwest(val):
             display_1.create_image(int(eastwest['coordinates'][0]), int(eastwest['coordinates'][1]),
                                    image=eastwest_image, tags=(tag_name, 'obj'))
             display_1.tag_bind(tag_name, '<Button-1>', lambda x, target=eastwest['target']: ew_switch (target)) #bind to different function
-    else:
-        pass
 
 #updates info boxes with relevant information
 def textswitch(icon):
