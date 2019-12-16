@@ -33,11 +33,8 @@ body = {"decks":{
             ],
         "exits": [
             {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
+             "coordinates": (190, 585),
+             "info": "Emergency Exit"}
             ]
         },
     "2 East":{
@@ -49,14 +46,6 @@ body = {"decks":{
              "coordinates": (305, 550),
              "info": "Remains of the main stacks dumbwaiter system."}
              ],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ],
         "eastwest": [
             {"coordinates": (315, 15),
              "target": "2 West"}
@@ -66,14 +55,6 @@ body = {"decks":{
         "file":'floorplans/west2.png',
         "deck_text":"Deck 2 West",
         "resize":[463, 300],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ],
         "eastwest": [
             {"coordinates": (232, 280),
              "target": "2 East"}
@@ -90,25 +71,14 @@ body = {"decks":{
             ],
         "exits": [
             {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ]
+             "coordinates": (195, 585),
+             "info": "Emergency Exit"}
+             ]
         },
     "3.5 West":{
         "file":'floorplans/west3-5.png',
         "deck_text":"Deck 3.5 West",
         "resize":[472, 300],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ]
         },
     "4 East":{
         "file":'floorplans/east4.png',
@@ -122,14 +92,6 @@ body = {"decks":{
              "coordinates": (295, 540),
              "info": "Remains of the main stacks dumbwaiter system."},
             ],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ]
         },
     "5 East":{
         "file":'floorplans/east5.png',
@@ -151,11 +113,8 @@ body = {"decks":{
             ],
         "exits": [
             {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
+             "coordinates": (174, 585),
+             "info": "Emergency Exit"},
             ],
         "eastwest": [
             {"coordinates": (179, 15),
@@ -166,14 +125,6 @@ body = {"decks":{
         "file":'floorplans/west5.png',
         "deck_text":"Deck 5 West",
         "resize":[472, 300],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ],
         "eastwest": [
             {"coordinates": (236, 285),
              "target": "5 East"}
@@ -187,15 +138,7 @@ body = {"decks":{
             {"name": "Dumbwaiter",
              "coordinates": (180, 580),
              "info": "Remains of the main stacks dumbwaiter system."}
-             ],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ]
+             ]
         },
     "7 East":{
         "file":'floorplans/east7.png',
@@ -211,12 +154,9 @@ body = {"decks":{
             ],
         "exits": [
             {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
-            ]
+             "coordinates": (201, 585),
+             "info": "Emergency Exit"},
+             ]
         },
     "8 East":{
         "file":'floorplans/east8.png',
@@ -226,14 +166,6 @@ body = {"decks":{
             {"name": "Dumbwaiter",
              "coordinates": (175, 577),
              "info": "Remains of the main stacks dumbwaiter system."}
-            ],
-        "exits": [
-            {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
-            {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
             ]
         },
     "9 East":{
@@ -247,11 +179,14 @@ body = {"decks":{
             ],
         "exits": [
             {"name": "Emergency Exit",
-             "coordinates": (150, 150),
-             "info": "Emergency Exit 1"},
+             "coordinates": (232, 585),
+             "info": "Emergency Exit 1 (Stairwell)"},
             {"name": "Emergency Exit",
-             "coordinates": (100, 100),
-             "info": "Emergency Exit 2"}
+             "coordinates": (15, 555),
+             "info": "Emergency Exit 2 (Stairwell)"},
+            {"name": "Emergency Exit",
+             "coordinates": (389, 555),
+             "info": "Emergency Exit 3 (Stairwell)"}
             ]
         },
     "9.5 West":{

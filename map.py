@@ -30,6 +30,10 @@ def switch():
         display_1.delete('obj')
         display_1.create_image(width/2, height/2, anchor=CENTER, image=deck_image, tags='obj')
 
+        info_2.delete(1.0, 'end')
+        info_2.insert(1.0, 'Click stars for more info, arrows to switch between East and West decks, exits for exit info.')
+        deck_text_title.set('')
+
         icons(val)
         exits(val)
         eastwest(val)
@@ -55,9 +59,8 @@ def icons(val):
                                    image=icon_image, tags=(tag_name, 'obj'))
             display_1.tag_bind(tag_name, '<Button-1>', lambda x, icon=icon: textswitch(icon)) #I gotta buy dinner for Vel for this one
 
-            info_2.delete(1.0, 'end') #this and following line need to be relocated for more consistent performance
-            info_2.insert(1.0, 'Click icons for more info')
-            deck_text_title.set('')
+ #this and following line need to be relocated for more consistent performance
+
 
 #renders emergency exits
 def exits(val):
