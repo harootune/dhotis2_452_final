@@ -1,6 +1,7 @@
 '''
-This file is just a quick utility I wrote to create json files from a python
-dictionary. Not directly used in the map's operation, just here for convenience
+jsonwriter.py
+Writes the json that determines map.py's content and behavior
+Author: Derek Otis
 '''
 
 body = {"decks":{

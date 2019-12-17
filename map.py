@@ -1,3 +1,9 @@
+'''
+map.py
+Final project for IS 452
+Author: Derek Otis
+'''
+
 #Import Statements
 from tkinter import *
 from tkinter import ttk
@@ -12,6 +18,7 @@ with open('deckinfo.json', 'rt') as infile:
 
 #Roots
 #Creates, names, and titles root window
+#NECESSARY FOR EVERYTHING ELSE TO WORK
 root = Tk()
 root.title('Stacks Map')
 
@@ -19,25 +26,28 @@ root.title('Stacks Map')
 #Handles screen switching and calls icon rendering functions
 def switch():
     val = deck_number.get()
+    #check if the deck exists
     if val in deck_info['decks']:
+        #render the deck image as a PIL Image, uses sizing info from the JSON for values
         width = deck_info['decks'][val]['resize'][0]
         height = deck_info['decks'][val]['resize'][1]
         deck_image_temp = Image.open(Path(deck_info['decks'][val]['file']))
         deck_image_temp = deck_image_temp.resize((width, height), Image.ANTIALIAS)
+        #invokes the global deck_image...this program has too many globals lol
         global deck_image
         deck_image = ImageTk.PhotoImage(deck_image_temp)
-
+        #clear the canvas and render the deck image
         display_1.delete('obj')
         display_1.create_image(width/2, height/2, anchor=CENTER, image=deck_image, tags='obj')
-
+        #clear the text fields and display a default message
         info_2.delete(1.0, 'end')
         info_2.insert(1.0, 'Click stars for more info, arrows to switch between East and West decks, exits for exit info.')
         deck_text_title.set('')
-
+        #check for various icons and render if present in the json
         icons(val)
         exits(val)
         eastwest(val)
-
+    #error handling
     else:
         info_2.delete(1.0, 'end')
         info_2.insert(1.0, 'Something went wrong.')
@@ -50,17 +60,22 @@ def ew_switch(target):
 
 #renders POI icons
 def icons(val):
-    if 'icons' in deck_info['decks'][val]:
+    if 'icons' in deck_info['decks'][val]: #renders icon items on the cavas
         count = 0
         for icon in deck_info['decks'][val]['icons']:
             count += 1
             tag_name = 'icon'+str(count)
             display_1.create_image(int(icon['coordinates'][0]), int(icon['coordinates'][1]),
                                    image=icon_image, tags=(tag_name, 'obj'))
-            display_1.tag_bind(tag_name, '<Button-1>', lambda x, icon=icon: textswitch(icon)) #I gotta buy dinner for Vel for this one
-
- #this and following line need to be relocated for more consistent performance
-
+            #a quick explanation of the next executable line
+            #canvases include a built in tag_bind() method which allows you to listen
+            #for a defined event and invoke a callback function when the event occurs
+            #"on" a certain canvas object
+            #However, this method ALWAYS passes the event its listening for as the
+            #first argument of the callback function you're invoking
+            #the lambda function below circumvents this by saving the event to x, and
+            #calling the function I actually want in its code body
+            display_1.tag_bind(tag_name, '<Button-1>', lambda x, icon=icon: textswitch(icon))
 
 #renders emergency exits
 def exits(val):
@@ -105,7 +120,7 @@ eastwest_image_temp = eastwest_image_temp.resize((25, 25), Image.ANTIALIAS)
 eastwest_image = ImageTk.PhotoImage(eastwest_image_temp)
 
 #Variables
-#inits some useful variables for later
+#inits some variables used by other TK objects
 deck_number = StringVar()
 deck_number.set('5 East')
 
@@ -113,7 +128,7 @@ deck_text_title = StringVar()
 deck_text_title.set('Intro')
 
 #Widgets
-#Creates widgets
+#Creates widgets (individual tk objects)
 #Frames
 frame_1 = ttk.Frame(root, borderwidth=5, relief='groove')
 dframe_1 = ttk.Frame(frame_1, borderwidth=3, relief='ridge')
@@ -143,6 +158,8 @@ button_1 = ttk.Button(dframe_3, text='Go', command=switch)
 
 #Grid
 #grid placement information
+#this defines where different tk objects are placed in relation to one another
+#and in relation to their default positions
 frame_1.grid(column=0, row=0, sticky=N+S+E+W)
 dframe_1.grid(column=0, row=0, sticky=N+S+E+W, rowspan=1)
 dframe_2.grid(column=0, row=1, sticky=N+S+E+W, rowspan=2)
@@ -176,4 +193,5 @@ dframe_3.rowconfigure((0, 1), weight=3)
 
 
 #Mainloop
+#This executes the program
 root.mainloop()
